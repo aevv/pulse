@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FBA073B0-5E74-4101-AEB5-AAD59DE90C88}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pulse</RootNamespace>
+    <AssemblyName>Pulse</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>pulseicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bass.Net">
+      <HintPath>.\Bass.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>.\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="lua51">
+      <HintPath>.\lua51.dll</HintPath>
+    </Reference>
+    <Reference Include="LuaInterface">
+      <HintPath>.\LuaInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\System.Data.SQLite\2010\bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="Animation.cs" />
+    <Compile Include="Audio\AudioFX.cs" />
+    <Compile Include="Audio\AudioManager.cs" />
+    <Compile Include="Client\Connection.cs" />
+    <Compile Include="Client\Handler.cs" />
+    <Compile Include="Client\irc\IrcClient.cs" />
+    <Compile Include="Client\LoginAuthHandler.cs" />
+    <Compile Include="Client\PacketWriter.cs" />
+    <Compile Include="Client\RecvHeaders.cs" />
+    <Compile Include="Client\SendHeaders.cs" />
+    <Compile Include="Client\Spectate.cs" />
+    <Compile Include="Client\User.cs" />
+    <Compile Include="Client\UserHandler.cs" />
+    <Compile Include="Client\VersionCheckHandler.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="DrawableComponent.cs" />
+    <Compile Include="ErrorLog.cs" />
+    <Compile Include="FlashWindow.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="GraphicalText.cs" />
+    <Compile Include="Line.cs" />
+    <Compile Include="Mechanics\Chart.cs" />
+    <Compile Include="Mechanics\DiffPair.cs" />
+    <Compile Include="Mechanics\Mods.cs" />
+    <Compile Include="Mechanics\Note.cs" />
+    <Compile Include="Mechanics\Ouendan\HitObject.cs" />
+    <Compile Include="Mechanics\Ouendan\Map.cs" />
+    <Compile Include="Mechanics\Replay.cs" />
+    <Compile Include="Mechanics\ReplayHit.cs" />
+    <Compile Include="Mechanics\Score.cs" />
+    <Compile Include="Mechanics\Song.cs" />
+    <Compile Include="Mechanics\SongInfo.cs" />
+    <Compile Include="Mechanics\SongPair.cs" />
+    <Compile Include="Mechanics\TimingSection.cs" />
+    <Compile Include="MediaPlayer.cs" />
+    <Compile Include="MouseInfo.cs" />
+    <Compile Include="Networking\additionHandler.cs" />
+    <Compile Include="Networking\AuthenticationHandler.cs" />
+    <Compile Include="Networking\ChatHandler.cs" />
+    <Compile Include="Networking\ClientHandler.cs" />
+    <Compile Include="Networking\Handler.cs" />
+    <Compile Include="Networking\Server.cs" />
+    <Compile Include="Networking\TestHandler.cs" />
+    <Compile Include="Pair.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreLibrary.cs" />
+    <Compile Include="Screens\IngameScreen.cs" />
+    <Compile Include="Screens\OptionsScreen.cs" />
+    <Compile Include="Screens\OuendanScreen.cs" />
+    <Compile Include="Screens\ScoreSelectScreen.cs" />
+    <Compile Include="Screens\EditorOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\EditorOptions.designer.cs">
+      <DependentUpon>EditorOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\EditorScreen.cs" />
+    <Compile Include="Screens\MenuScreen.cs" />
+    <Compile Include="Screens\PauseScreen.cs" />
+    <Compile Include="Screens\ScoreScreen.cs" />
+    <Compile Include="Screens\SelectScreen.cs" />
+    <Compile Include="Screens\SelectScreen2.cs" />
+    <Compile Include="Screens\TimingScreen.cs" />
+    <Compile Include="Screens\UserDisplayScreen.cs" />
+    <Compile Include="Scripting\LuaScript.cs" />
+    <Compile Include="Scripting\ScriptCommands.cs" />
+    <Compile Include="Skin.cs" />
+    <Compile Include="SongLibrary.cs" />
+    <Compile Include="TextureManager.cs" />
+    <Compile Include="Tips.cs" />
+    <Compile Include="UI\DefaultSkin1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefaultSkin.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dragbar.cs" />
+    <Compile Include="UI\DropDownBox.cs" />
+    <Compile Include="UI\EditorHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\EditorHelp.Designer.cs">
+      <DependentUpon>EditorHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Frame.cs" />
+    <Compile Include="UI\GLControlTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\GLControlTest.Designer.cs">
+      <DependentUpon>GLControlTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoginDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LoginDialog.Designer.cs">
+      <DependentUpon>LoginDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Marquee.cs" />
+    <Compile Include="UI\NewSong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NewSong.Designer.cs">
+      <DependentUpon>NewSong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Notice.cs" />
+    <Compile Include="UI\Panel.cs" />
+    <Compile Include="UI\SelectComponent.cs" />
+    <Compile Include="UI\Button.cs" />
+    <Compile Include="UI\Control.cs" />
+    <Compile Include="UI\InterfaceComponent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\Screen.cs" />
+    <Compile Include="Text.cs" />
+    <Compile Include="Rect.cs" />
+    <Compile Include="UI\Label.cs" />
+    <Compile Include="UI\Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PropertyBag.cs" />
+    <Compile Include="UI\PTextBox.cs" />
+    <Compile Include="UI\SongDisplay.cs" />
+    <Compile Include="UI\toast.cs" />
+    <Compile Include="UI\ToggleButton.cs" />
+    <Compile Include="UI\UserDisplay.cs" />
+    <Compile Include="UI\UserList.cs" />
+    <Compile Include="UI\WaterMarkTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\EditorOptions.resx">
+      <DependentUpon>EditorOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DefaultSkin.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DefaultSkin1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\EditorHelp.resx">
+      <DependentUpon>EditorHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\GLControlTest.resx">
+      <DependentUpon>GLControlTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoginDialog.resx">
+      <DependentUpon>LoginDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NewSong.resx">
+      <DependentUpon>NewSong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.Xna.Framework">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Help\Advanced\music.html" />
+    <Content Include="bin\Debug\Help\Advanced\playback.html" />
+    <Content Include="bin\Debug\Help\Advanced\PNCformat.html" />
+    <Content Include="bin\Debug\Help\binds.html" />
+    <Content Include="bin\Debug\Help\contents.html" />
+    <Content Include="bin\Debug\Help\General\timing.html" />
+    <Content Include="bin\Debug\Help\General\working.html" />
+    <Content Include="bin\Debug\Help\Img\plogo.png" />
+    <Content Include="bin\Debug\Help\General\newsong.html" />
+    <Content Include="bin\Debug\Help\Navigation\bookmarks.html" />
+    <Content Include="bin\Debug\Help\Navigation\scrolling.html" />
+    <Content Include="bin\Debug\skin\aaaplogogrey.png" />
+    <Content Include="bin\Debug\skin\defaultbg.png" />
+    <Content Include="bin\Debug\skin\default\bottomFrame.png" />
+    <Content Include="bin\Debug\skin\default\0.png" />
+    <Content Include="bin\Debug\skin\default\1.png" />
+    <Content Include="bin\Debug\skin\default\2.png" />
+    <Content Include="bin\Debug\skin\default\3.png" />
+    <Content Include="bin\Debug\skin\default\4.png" />
+    <Content Include="bin\Debug\skin\default\5.png" />
+    <Content Include="bin\Debug\skin\default\6.png" />
+    <Content Include="bin\Debug\skin\default\7.png" />
+    <Content Include="bin\Debug\skin\default\8.png" />
+    <Content Include="bin\Debug\skin\default\9.png" />
+    <Content Include="bin\Debug\skin\default\bar.png" />
+    <Content Include="bin\Debug\skin\default\bottomFrame2.png" />
+    <Content Include="bin\Debug\skin\default\burst.png" />
+    <Content Include="bin\Debug\skin\default\burst0.png" />
+    <Content Include="bin\Debug\skin\default\burst1.png" />
+    <Content Include="bin\Debug\skin\default\burst10.png" />
+    <Content Include="bin\Debug\skin\default\burst2.png" />
+    <Content Include="bin\Debug\skin\default\burst3.png" />
+    <Content Include="bin\Debug\skin\default\burst4.png" />
+    <Content Include="bin\Debug\skin\default\burst5.png" />
+    <Content Include="bin\Debug\skin\default\burst6.png" />
+    <Content Include="bin\Debug\skin\default\burst7.png" />
+    <Content Include="bin\Debug\skin\default\burst8.png" />
+    <Content Include="bin\Debug\skin\default\burst9.png" />
+    <Content Include="bin\Debug\skin\default\combobreak.mp3" />
+    <Content Include="bin\Debug\skin\default\combobreak.wav" />
+    <Content Include="bin\Debug\skin\default\frameBack.png" />
+    <Content Include="bin\Debug\skin\default\frameDivide.png" />
+    <Content Include="bin\Debug\skin\default\frameLeft.png" />
+    <Content Include="bin\Debug\skin\default\frameSide.png" />
+    <Content Include="bin\Debug\skin\default\good.png" />
+    <Content Include="bin\Debug\skin\default\great.png" />
+    <Content Include="bin\Debug\skin\default\hbar.png" />
+    <Content Include="bin\Debug\skin\default\hitBar.png" />
+    <Content Include="bin\Debug\skin\default\holdBar.png" />
+    <Content Include="bin\Debug\skin\default\holdEnd.png" />
+    <Content Include="bin\Debug\skin\default\holdStart.png" />
+    <Content Include="bin\Debug\skin\default\key1.png" />
+    <Content Include="bin\Debug\skin\default\key2.png" />
+    <Content Include="bin\Debug\skin\default\key3.png" />
+    <Content Include="bin\Debug\skin\default\key4.png" />
+    <Content Include="bin\Debug\skin\default\key5.png" />
+    <Content Include="bin\Debug\skin\default\key6.png" />
+    <Content Include="bin\Debug\skin\default\key7.png" />
+    <Content Include="bin\Debug\skin\default\keyLight.png" />
+    <Content Include="bin\Debug\skin\default\menuButton.png" />
+    <Content Include="bin\Debug\skin\default\miss.png" />
+    <Content Include="bin\Debug\skin\default\normal-hitclap.wav" />
+    <Content Include="bin\Debug\skin\default\normal-hitfinish.wav" />
+    <Content Include="bin\Debug\skin\default\normal-hitnormal.wav" />
+    <Content Include="bin\Debug\skin\default\normal-hitwhistle.wav" />
+    <Content Include="bin\Debug\skin\default\note.png" />
+    <Content Include="bin\Debug\skin\default\note0.png" />
+    <Content Include="bin\Debug\skin\default\note1.png" />
+    <Content Include="bin\Debug\skin\default\note2.png" />
+    <Content Include="bin\Debug\skin\default\notea0.png" />
+    <Content Include="bin\Debug\skin\default\notea1.png" />
+    <Content Include="bin\Debug\skin\default\notea2.png" />
+    <Content Include="bin\Debug\skin\default\noteb0.png" />
+    <Content Include="bin\Debug\skin\default\noteb1.png" />
+    <Content Include="bin\Debug\skin\default\noteb2.png" />
+    <Content Include="bin\Debug\skin\default\notec0.png" />
+    <Content Include="bin\Debug\skin\default\notec1.png" />
+    <Content Include="bin\Debug\skin\default\notec2.png" />
+    <Content Include="bin\Debug\skin\default\ok.png" />
+    <Content Include="bin\Debug\skin\default\perfect.png" />
+    <Content Include="bin\Debug\skin\default\press1.png" />
+    <Content Include="bin\Debug\skin\default\press2.png" />
+    <Content Include="bin\Debug\skin\default\press3.png" />
+    <Content Include="bin\Debug\skin\default\press4.png" />
+    <Content Include="bin\Debug\skin\default\press5.png" />
+    <Content Include="bin\Debug\skin\default\press6.png" />
+    <Content Include="bin\Debug\skin\default\press7.png" />
+    <Content Include="bin\Debug\skin\default\scorebg.png" />
+    <Content Include="bin\Debug\skin\default\scoreBottom.png" />
+    <Content Include="bin\Debug\skin\default\scoreentry.png" />
+    <Content Include="bin\Debug\skin\default\scoreFrame.png" />
+    <Content Include="bin\Debug\skin\default\scorel.png" />
+    <Content Include="bin\Debug\skin\default\scroll.png" />
+    <Content Include="bin\Debug\skin\default\songselect.png" />
+    <Content Include="bin\Debug\skin\default\toast.png" />
+    <Content Include="bin\Debug\Help\Pulse Documentation.html" />
+    <Content Include="bin\Debug\skin\default\volumecontrol.png" />
+    <Content Include="bin\Debug\skin\default\tlContainer.png" />
+    <Content Include="bin\Debug\Ionic.Zip.dll" />
+    <Content Include="bin\Debug\skin\default\x.png" />
+    <Content Include="bin\Debug\skin\plogo.png" />
+    <Content Include="bin\Debug\skin\plogogrey.png" />
+    <Content Include="bin\Debug\skin\plogogrey1.png" />
+    <Content Include="bin\Debug\skin\plogogrey2.png" />
+    <Content Include="bin\Debug\skin\plogogreyb.png" />
+    <Content Include="pulseicon.ico" />
+    <None Include="app.config" />
+    <None Include="bin\Debug\skin\default\skin.ini" />
+    <None Include="bin\Debug\skin\default\skiniidx.ini" />
+    <None Include="Resources\pulseicon.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

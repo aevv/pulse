@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pulse", "Pulse.csproj", "{FBA073B0-5E74-4101-AEB5-AAD59DE90C88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Updater", "..\..\..\Documents\Visual Studio 2010\Projects\Updater\Updater\Updater.csproj", "{8E0C776D-F8C6-46CA-9F9B-A43BA55D8A2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateClient", "..\..\..\Documents\Visual Studio 2010\Projects\UpdateClient\UpdateClient\UpdateClient.csproj", "{97AE905F-7905-4559-91D3-41DBB2E375BC}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://92.232.66.53:9292/tfs/pulse
+		SccProjectUniqueName0 = Pulse.csproj
+		SccLocalPath0 = .
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = ..\\..\\..\\Documents\\Visual\u0020Studio\u00202010\\Projects\\Updater\\Updater\\Updater.csproj
+		SccProjectName2 = Updater
+		SccLocalPath2 = ..\\..\\..\\Documents\\Visual\u0020Studio\u00202010\\Projects\\Updater\\Updater
+		SccProjectUniqueName3 = ..\\..\\..\\Documents\\Visual\u0020Studio\u00202010\\Projects\\UpdateClient\\UpdateClient\\UpdateClient.csproj
+		SccProjectName3 = UpdateClient
+		SccLocalPath3 = ..\\..\\..\\Documents\\Visual\u0020Studio\u00202010\\Projects\\UpdateClient\\UpdateClient
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBA073B0-5E74-4101-AEB5-AAD59DE90C88}.Debug|x86.ActiveCfg = Debug|x86
+		{FBA073B0-5E74-4101-AEB5-AAD59DE90C88}.Debug|x86.Build.0 = Debug|x86
+		{FBA073B0-5E74-4101-AEB5-AAD59DE90C88}.Release|x86.ActiveCfg = Release|x86
+		{FBA073B0-5E74-4101-AEB5-AAD59DE90C88}.Release|x86.Build.0 = Release|x86
+		{8E0C776D-F8C6-46CA-9F9B-A43BA55D8A2C}.Debug|x86.ActiveCfg = Debug|x86
+		{8E0C776D-F8C6-46CA-9F9B-A43BA55D8A2C}.Debug|x86.Build.0 = Debug|x86
+		{8E0C776D-F8C6-46CA-9F9B-A43BA55D8A2C}.Release|x86.ActiveCfg = Release|x86
+		{8E0C776D-F8C6-46CA-9F9B-A43BA55D8A2C}.Release|x86.Build.0 = Release|x86
+		{97AE905F-7905-4559-91D3-41DBB2E375BC}.Debug|x86.ActiveCfg = Debug|x86
+		{97AE905F-7905-4559-91D3-41DBB2E375BC}.Debug|x86.Build.0 = Debug|x86
+		{97AE905F-7905-4559-91D3-41DBB2E375BC}.Release|x86.ActiveCfg = Release|x86
+		{97AE905F-7905-4559-91D3-41DBB2E375BC}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
