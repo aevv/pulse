@@ -248,19 +248,26 @@ namespace Pulse
             updateText = true;
             if (currentSong.FileVersion > 0)
             {
-                if (currentSong.ID == -1)
+                try
                 {
-                    NameValueCollection nvc = new NameValueCollection();
-                    nvc.Add("c", Utils.calcHash(currentSong.Charts[0].Path));
-                    int id = Convert.ToInt32(Utils.HttpUploadFile("http://p.ulse.net/idchart", nvc));
-                    if (id == -1)
+                    if (currentSong.ID == -1)
                     {
-                        id = -2;
+                        NameValueCollection nvc = new NameValueCollection();
+                        nvc.Add("c", Utils.calcHash(currentSong.Charts[0].Path));
+                        int id = Convert.ToInt32(Utils.HttpUploadFile("http://p.ulse.net/idchart", nvc));
+                        if (id == -1)
+                        {
+                            id = -2;
+                        }
+                        currentSong.ID = id;
+
+                        SongLibrary.Songs[SongLibrary.Songs.IndexOf(s)].ID = id;
+                        SongLibrary.songInfos[currentSong.Dir].ID = id;
                     }
-                    currentSong.ID = id;
-                    
-                    SongLibrary.Songs[SongLibrary.Songs.IndexOf(s)].ID = id;
-                    SongLibrary.songInfos[currentSong.Dir].ID = id;
+                }
+                catch
+                {
+                    //no connection
                 }
             }
             else
